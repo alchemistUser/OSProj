@@ -101,17 +101,17 @@ public class PnlMainMenu extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Btns.back();
+        Btns.openProg1();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Main.frame.setPanel(Main.pnlProg2);
+        Btns.openProg2();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        Main.frame.setPanel(Main.pnlProg3);
+        Btns.openProg3();
     }//GEN-LAST:event_jButton3ActionPerformed
 
 

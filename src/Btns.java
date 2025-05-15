@@ -9,18 +9,18 @@
  */
 public class Btns{
     Btns(){
-        
+        System.out.println("hi");
     }
     static void back(){
         Main.frame.startup();
     }
-    static void btnOpenProg1(){
+    static void openProg1(){
         Main.frame.setPanel(Main.pnlProg1);
     }
-    static void btnOpenProg2(){
+    static void openProg2(){
         Main.frame.setPanel(Main.pnlProg2);
     }
-    static void btnOpenProg3(){
+    static void openProg3(){
         Main.frame.setPanel(Main.pnlProg3);
     }
 }
