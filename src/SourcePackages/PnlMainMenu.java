@@ -1,3 +1,8 @@
+package SourcePackages;
+
+
+
+import Helpers.Btns;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
@@ -94,9 +99,6 @@ public class PnlMainMenu extends javax.swing.JPanel {
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(233, Short.MAX_VALUE))
         );
-
-        jButton2.getAccessibleContext().setAccessibleName("jButton2");
-        jButton3.getAccessibleContext().setAccessibleName("jButton3");
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

@@ -1,3 +1,8 @@
+package ProgramPanels;
+
+
+import Helpers.Btns;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
@@ -7,12 +12,12 @@
  *
  * @author Pololoers
  */
-public class PnlProg3 extends javax.swing.JPanel {
+public class PnlProg2 extends javax.swing.JPanel {
 
     /**
-     * Creates new form pnlProj3
+     * Creates new form pnlProj2
      */
-    public PnlProg3() {
+    public PnlProg2() {
         initComponents();
     }
 
@@ -27,7 +32,7 @@ public class PnlProg3 extends javax.swing.JPanel {
 
         jButton1 = new javax.swing.JButton();
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/arrow-small-left.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/arrow-small-left.png"))); // NOI18N
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);

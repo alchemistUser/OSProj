@@ -1,3 +1,9 @@
+package SourcePackages;
+
+
+
+
+
 
 import java.awt.Color;
 import javax.swing.JFrame;
@@ -36,7 +42,7 @@ public class FrmTheFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    void visible() {
+    public void visible() {
         this.setVisible(true);
     }
 
@@ -47,13 +53,13 @@ public class FrmTheFrame extends JFrame {
         panel.repaint();
     }
 
-    void setPanel(JPanel pnlChild) {
+    public void setPanel(JPanel pnlChild) {
         clrPnl();
         pnlChild.setBounds(0, 0, 1280, 720);
         panel.add(pnlChild);
     }
     
-    void startup(){        
+    public void startup(){        
         clrPnl();
         setPanel(pnlmainmenu);
     }

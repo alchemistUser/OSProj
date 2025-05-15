@@ -1,3 +1,7 @@
+package Helpers;
+
+import SourcePackages.Main;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -11,16 +15,16 @@ public class Btns{
     Btns(){
         System.out.println("hi");
     }
-    static void back(){
+    public static void back(){
         Main.frame.startup();
     }
-    static void openProg1(){
+    public static void openProg1(){
         Main.frame.setPanel(Main.pnlProg1);
     }
-    static void openProg2(){
+    public static void openProg2(){
         Main.frame.setPanel(Main.pnlProg2);
     }
-    static void openProg3(){
+    public static void openProg3(){
         Main.frame.setPanel(Main.pnlProg3);
     }
 }
