@@ -11,8 +11,10 @@ import javax.swing.JPanel;
  *
  * @author Pololoers
  */
-public class TheFrame extends JFrame {
+public class FrmTheFrame extends JFrame {
 
+    PnlMainMenu pnlmainmenu = new PnlMainMenu();
+    
     JPanel panel = new JPanel() {
         {
             setBackground(Color.WHITE);
@@ -21,15 +23,21 @@ public class TheFrame extends JFrame {
         }
     };
 
-    TheFrame() {
+    FrmTheFrame() {
         super("OS Final Project");
         setSize(1295, 758);
+        setResizable(false);
         setLayout(null);
 
         add(panel);
-
+        startup();
+        
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    void visible() {
+        this.setVisible(true);
     }
 
     void clrPnl() {
@@ -38,9 +46,16 @@ public class TheFrame extends JFrame {
         panel.revalidate();
         panel.repaint();
     }
-    
-    void setPanel(JPanel pnlChild){
+
+    void setPanel(JPanel pnlChild) {
         clrPnl();
+        pnlChild.setBounds(0, 0, 1280, 720);
         panel.add(pnlChild);
     }
+    
+    void startup(){        
+        clrPnl();
+        setPanel(pnlmainmenu);
+    }
+
 }
