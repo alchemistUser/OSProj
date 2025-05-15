@@ -32,6 +32,8 @@ public class PnlProg3 extends javax.swing.JPanel {
 
         jButton1 = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/arrow-small-left.png"))); // NOI18N
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
