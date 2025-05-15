@@ -98,5 +98,19 @@ public class Btns {
                         avgTAT, avgWT));
         
         clearTextFields(Main.pnlProg1);
+        
+        //clear panel first        
+        Main.pnlProg1.jPanel1.removeAll();
+        Main.pnlProg1.jPanel1.revalidate();
+        Main.pnlProg1.jPanel1.repaint();
+        
+        // grantt
+        GanttChartPanel ganttPanel = new GanttChartPanel();
+        ganttPanel.setBounds(0, 0, 1004, 100);
+        Main.pnlProg1.jPanel1.add(ganttPanel);
+        Main.pnlProg1.jPanel1.revalidate();
+        Main.pnlProg1.jPanel1.repaint();
+        
+        ganttPanel.setProcesses(Main.processes);
     }
 }

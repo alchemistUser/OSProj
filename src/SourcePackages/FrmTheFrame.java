@@ -66,6 +66,9 @@ public class FrmTheFrame extends JFrame {
         // program 1
         Main.pnlProg1.model.setRowCount(0);
         Main.processes.clear();
+        Main.pnlProg1.jPanel1.removeAll();
+        Main.pnlProg1.jPanel1.revalidate();
+        Main.pnlProg1.jPanel1.repaint();
     }
 
     public void setPanel(JPanel pnlChild) {

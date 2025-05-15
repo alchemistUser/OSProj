@@ -2,12 +2,12 @@ package Helpers;
 
 public class Process {
 
-    int id;
-    int burstTime;
-    int arrivalTime;
-    int completionTime;
-    int turnaroundTime;
-    int waitingTime;
+    public int id;
+    public int burstTime;
+    public int arrivalTime;
+    public int completionTime;
+    public int turnaroundTime;
+    public int waitingTime;
 
     public Process(int id, int burstTime, int arrivalTime) {
         this.id = id;
