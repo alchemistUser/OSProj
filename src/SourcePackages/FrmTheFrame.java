@@ -1,13 +1,12 @@
 package SourcePackages;
 
-
-
-
-
-
 import java.awt.Color;
+import java.awt.Component;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -20,7 +19,7 @@ import javax.swing.JPanel;
 public class FrmTheFrame extends JFrame {
 
     PnlMainMenu pnlmainmenu = new PnlMainMenu();
-    
+
     JPanel panel = new JPanel() {
         {
             setBackground(Color.WHITE);
@@ -37,7 +36,7 @@ public class FrmTheFrame extends JFrame {
 
         add(panel);
         startup();
-        
+
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
@@ -47,10 +46,26 @@ public class FrmTheFrame extends JFrame {
     }
 
     void clrPnl() {
+        for (Component comp : panel.getComponents()) {
+            if (comp instanceof JPanel) {
+                clearInputsInPanel((JPanel) comp);
+            }
+        }
         panel.removeAll();
-
         panel.revalidate();
         panel.repaint();
+    }
+
+    void clearInputsInPanel(JPanel pnl) {
+        // clear textfield
+        for (Component comp : pnl.getComponents()) {
+            if (comp instanceof JTextField) {
+                ((JTextField) comp).setText("");
+            }
+        }
+        // program 1
+        Main.pnlProg1.model.setRowCount(0);
+        Main.processes.clear();
     }
 
     public void setPanel(JPanel pnlChild) {
@@ -58,8 +73,8 @@ public class FrmTheFrame extends JFrame {
         pnlChild.setBounds(0, 0, 1280, 720);
         panel.add(pnlChild);
     }
-    
-    public void startup(){        
+
+    public void startup() {
         clrPnl();
         setPanel(pnlmainmenu);
     }
