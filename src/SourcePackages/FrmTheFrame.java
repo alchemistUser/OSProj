@@ -4,18 +4,8 @@ import java.awt.Color;
 import java.awt.Component;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JTable;
 import javax.swing.JTextField;
-import javax.swing.table.DefaultTableModel;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-/**
- *
- * @author Pololoers
- */
 public class FrmTheFrame extends JFrame {
 
     PnlMainMenu pnlmainmenu = new PnlMainMenu();
@@ -63,12 +53,6 @@ public class FrmTheFrame extends JFrame {
                 ((JTextField) comp).setText("");
             }
         }
-        // program 1
-        Main.pnlProg1.model.setRowCount(0);
-        Main.processes.clear();
-        Main.pnlProg1.jPanel1.removeAll();
-        Main.pnlProg1.jPanel1.revalidate();
-        Main.pnlProg1.jPanel1.repaint();
     }
 
     public void setPanel(JPanel pnlChild) {
@@ -82,4 +66,27 @@ public class FrmTheFrame extends JFrame {
         setPanel(pnlmainmenu);
     }
 
+    public static void back() {
+        Main.frame.startup();
+    }
+
+    public static void openProg1() {
+        Main.frame.setPanel(Main.pnlProg1);
+    }
+
+    public static void openProg2() {
+        Main.frame.setPanel(Main.pnlProg2);
+    }
+
+    public static void openProg3() {
+        Main.frame.setPanel(Main.pnlProg3);
+    }
+
+    public static void clearTextFields(JPanel pnl) {
+        for (Component comp : pnl.getComponents()) {
+            if (comp instanceof JTextField) {
+                ((JTextField) comp).setText("");
+            }
+        }
+    }
 }

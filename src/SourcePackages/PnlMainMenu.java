@@ -1,17 +1,5 @@
 package SourcePackages;
 
-
-
-import Helpers.Btns;
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
-
-/**
- *
- * @author Pololoers
- */
 public class PnlMainMenu extends javax.swing.JPanel {
 
     /**
@@ -103,17 +91,17 @@ public class PnlMainMenu extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Btns.openProg1();
+        Main.frame.openProg1();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Btns.openProg2();
+        Main.frame.openProg2();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        Btns.openProg3();
+        Main.frame.openProg3();
     }//GEN-LAST:event_jButton3ActionPerformed
 
 

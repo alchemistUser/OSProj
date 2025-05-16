@@ -1,23 +1,13 @@
-package ProgramPanels;
+package Program3;
 
+import SourcePackages.Main;
 
-import Helpers.Btns;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
-
-/**
- *
- * @author Pololoers
- */
-public class PnlProg2 extends javax.swing.JPanel {
+public class PnlProg3 extends javax.swing.JPanel {
 
     /**
-     * Creates new form pnlProj2
+     * Creates new form pnlProj3
      */
-    public PnlProg2() {
+    public PnlProg3() {
         initComponents();
     }
 
@@ -66,7 +56,7 @@ public class PnlProg2 extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Btns.back();
+        Main.frame.back();
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

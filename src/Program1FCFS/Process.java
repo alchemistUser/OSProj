@@ -1,4 +1,4 @@
-package Helpers;
+package Program1FCFS;
 
 public class Process {
 

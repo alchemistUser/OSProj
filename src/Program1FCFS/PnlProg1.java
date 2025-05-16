@@ -1,21 +1,8 @@
-package ProgramPanels;
+package Program1FCFS;
 
-import Helpers.Btns;
-import Helpers.Process;
 import SourcePackages.Main;
-import java.awt.Component;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
-/**
- *
- * @author Pololoers
- */
 public class PnlProg1 extends javax.swing.JPanel {
 
     public DefaultTableModel model;
@@ -145,7 +132,7 @@ public class PnlProg1 extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel4.setText("FIRST COME FIRST SERVE");
 
-        jButton4.setBackground(new java.awt.Color(204, 204, 204));
+        jButton4.setBackground(java.awt.SystemColor.control);
         jButton4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButton4.setText("Genarate Random");
         jButton4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -156,7 +143,7 @@ public class PnlProg1 extends javax.swing.JPanel {
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(204, 204, 204));
+        jButton5.setBackground(java.awt.SystemColor.control);
         jButton5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButton5.setText("Genarate Random");
         jButton5.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -167,11 +154,11 @@ public class PnlProg1 extends javax.swing.JPanel {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(java.awt.SystemColor.control);
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 100));
         jPanel1.setLayout(null);
 
-        jButton6.setBackground(new java.awt.Color(204, 204, 204));
+        jButton6.setBackground(java.awt.SystemColor.control);
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton6.setText("RESET");
         jButton6.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -263,32 +250,17 @@ public class PnlProg1 extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Btns.back();
+        Main.frame.back();        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        try {
-            int id = Integer.parseInt(jTextField1.getText());
-            int burst = Integer.parseInt(jTextField2.getText());
-            int arrival = Integer.parseInt(jTextField3.getText());
-
-            // Create new Process
-            Main.processes.add(new Process(id, burst, arrival));
-
-            // Add row to table without scheduling results yet
-            model.addRow(new Object[]{id, burst, arrival, "", "", ""});
-
-            Btns.clearTextFields(this);
-
-        } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(this, "Please enter valid numbers.");
-        }
+        P1Fns.add(jTextField1, jTextField2, jTextField3, model);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        Btns.runFCFS(model);
+        P1Fns.runFCFS(model, jTextField1, jTextField2, jTextField3, jPanel1);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -317,18 +289,7 @@ public class PnlProg1 extends javax.swing.JPanel {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        // clear textfield
-        for (Component comp : this.getComponents()) {
-            if (comp instanceof JTextField) {
-                ((JTextField) comp).setText("");
-            }
-        }
-        // program 1
-        this.model.setRowCount(0);
-        Main.processes.clear();
-        jPanel1.removeAll();
-        jPanel1.repaint();
-        jPanel1.revalidate();
+        P1Fns.reset();
     }//GEN-LAST:event_jButton6ActionPerformed
 
 
