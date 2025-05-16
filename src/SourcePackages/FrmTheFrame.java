@@ -66,7 +66,7 @@ public class FrmTheFrame extends JFrame {
         setPanel(pnlmainmenu);
     }
 
-    public static void back() {
+    public void back() {
         Main.frame.startup();
     }
 

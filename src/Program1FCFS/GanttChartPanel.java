@@ -22,7 +22,6 @@ public class GanttChartPanel extends JPanel {
 
         int y = 30;
         int height = 40;
-        int padding = 5;
 
         // Calculate total execution time (makespan)
         int makespan = 0;

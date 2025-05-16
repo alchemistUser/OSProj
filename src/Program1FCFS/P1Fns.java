@@ -2,8 +2,8 @@
 package Program1FCFS;
 
 import SourcePackages.Main;
-import java.awt.Component;
 
+import java.awt.Component;
 import java.util.ArrayList;
 import java.util.Comparator;
 import javax.swing.JOptionPane;
